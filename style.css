@@ -20,7 +20,10 @@ h1 {
 }
 
 .main {
-    background: linear-gradient(to right, #7f00ff, #e100ff);
+    background-image: url("787593.svg");
+    background-size: 50px;
+    background-repeat: no-repeat;
+    height: 50vh;
 }
 
 
@@ -53,12 +56,16 @@ button {
 
     margin: 2rem auto;
     padding: 1rem 2rem;
-    border: 1px solid;
+    border: none;
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 1.5rem;
     cursor: pointer;
     color: white;
+    text-align: center;
+    align-items: center;
+    display: block;
+
 
     background: linear-gradient(to right, #654ea3, #eaafc8);
     transition: 0.2s;
@@ -72,11 +79,3 @@ button:hover {
 
 
 
-.table {
-    width: 100%;
-}
-
-th {
-    align-items: center;
-    text-align: center;
-}
