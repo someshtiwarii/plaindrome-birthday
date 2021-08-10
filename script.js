@@ -5,7 +5,7 @@ const error = `<div class="label">Enter birthdate in appropriate format !</div>`
 
 const dateInput = document.querySelector(".input-date");
 const outputDiv = document.querySelector(".output");
-const checkBtn = document.querySelector(".check-btn")
+const checkBtn = document.querySelector(".check-btn");
 
 
 
@@ -196,16 +196,16 @@ function getPreviousPalindromeDate(date){
 
 }
 
-checkBtn.addEventListener('click', clickHandler());
 
-function clickHandler(){
+
+function clickHandler(e){
     var bdayStr = dateInput.value;
     if(bdayStr!==""){
-        var listOfDate = bday.Str.split("-");
+        var listOfDate = bdayStr.split("-");
         var date = {
             day : Number(listOfDate[2]),
-            month : Number(listOfdate[1]),
-            year : Number(listOfDate[0])
+            month : Number(listOfDate[1]),
+            year : Number(listOfDate[0]),
         };
     }
     else{
@@ -228,3 +228,5 @@ function clickHandler(){
 
 
 }
+
+checkBtn.addEventListener("click", clickHandler);
