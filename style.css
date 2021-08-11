@@ -34,8 +34,6 @@ h1 {
     font-size: 1.5rem;
     text-align: center;
     align-items: center;
-
-
 }
 
 
@@ -76,6 +74,10 @@ button:hover {
     transform: scale(1.2);
 }
 
-
+#output{
+    font-size: 2rem;
+    padding: 1rem 0 0rem;
+    text-align: center;
+}
 
 
