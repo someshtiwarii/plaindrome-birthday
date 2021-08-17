@@ -185,7 +185,10 @@ function reverseStr(str) {
   var bdayInput = document.querySelector('#input-date');
   var checkBtn = document.querySelector('#check-btn');
   var resultDiv = document.querySelector('#output');
-  
+
+
+
+
   function clickHandler(e) {
     var bdayString = bdayInput.value;
   
@@ -227,6 +230,20 @@ function reverseStr(str) {
       }
     }
   }
-  
-  checkBtn.addEventListener('click', clickHandler);
+
+
+
+  function showGif(e){
+    if(bdayInput.value){
+      resultDiv.style.background = 'red' ;
+      setTimeout( ()=>{clickHandler();},3000);
+    }
+    else{
+      resultDiv.innerText = 'Please fill the date first !';
+    }
+
+  };
+
+
+  checkBtn.addEventListener('click', showGif);
   
