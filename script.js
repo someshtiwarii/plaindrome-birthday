@@ -220,13 +220,17 @@ function reverseStr(str) {
         const [ctr2, prevDate] = getPreviousPalindromeDate(date);
   
         if (ctr1 > ctr2) {
-          resultDiv.innerText = `The nearest Palindrome date is ${prevDate.day}-${prevDate.month}-${prevDate.year}, you missed by ${ctr2} days.`;
+          resultDiv.style.backgroundImage = 'none';
+
+          resultDiv.innerText = `Ohho ! The nearest Palindrome date is ${prevDate.day}-${prevDate.month}-${prevDate.year}, you missed by ${ctr2} days. 😓`;
         } else {
-          resultDiv.innerText = `The nearest Palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed by ${ctr1} days.`;
+          resultDiv.style.backgroundImage = 'none';
+          
+          resultDiv.innerText = `The nearest Palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed by ${ctr1} days. 😓`;
         }
   
       } else {
-        resultDiv.innerText = 'Yay! Your birthday is palindrome!';
+        resultDiv.innerText = 'Yay! Your birthday is palindrome! 😄';
       }
     }
   }
@@ -235,11 +239,14 @@ function reverseStr(str) {
 
   function showGif(e){
     if(bdayInput.value){
-      resultDiv.style.background = 'red' ;
-      setTimeout( ()=>{clickHandler();},3000);
+      resultDiv.style.backgroundPosition = "center";
+      resultDiv.style.backgroundSize = "200px 200px";
+      resultDiv.style.backgroundRepeat = "no-repeat";
+      resultDiv.style.backgroundImage = "url('waiting.gif')";
+      setTimeout( ()=>{clickHandler();},7000);
     }
     else{
-      resultDiv.innerText = 'Please fill the date first !';
+      resultDiv.innerText = 'Please fill the date first ! 👿';
     }
 
   };
