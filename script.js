@@ -230,7 +230,8 @@ function reverseStr(str) {
         }
   
       } else {
-        resultDiv.innerText = 'Yay! Your birthday is palindrome! 😄';
+        resultDiv.style.backgroundImage = 'none';
+        resultDiv.innerText = 'Yaaay! Your birthday is palindrome! 😄';
       }
     }
   }
